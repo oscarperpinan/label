@@ -9,11 +9,15 @@ They have been included in the `maptools` package, which is to be archived.
 
 ## Usage
 
+Read the help files contained in the [man](man) folder for details.
+
 ### Point labels
 ```
 library(lattice)
 library(RColorBrewer)
 library(sp)
+
+source("R/pointLabel.R")
 
 n <- 15
 x <- rnorm(n)*10
@@ -62,6 +66,8 @@ spplot(meuse.grid["dist"], col.regions=myCols, sp.layout=list(sl1, sl2))
 library(lattice)
 library(RColorBrewer)
 library(sp)
+
+source("R/lineLabel.R")
 
 data(meuse.grid)
 coordinates(meuse.grid) = ~x+y
